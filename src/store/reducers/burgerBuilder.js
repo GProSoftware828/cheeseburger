@@ -37,7 +37,13 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 //action is library method referring to action file in redux, ingredients is our payload from ajax request:
-                ingredients: action.ingredients,
+                ingredients: {
+                    salad: action.ingredients.salad,
+                    bacon: action.ingredients.bacon,
+                    cheese: action.ingredients.cheese,
+                    meat: action.ingredients.meat
+                },
+                totalPrice: 4,
                 error: false
             };
         case actionTypes.FETCH_INGREDIENTS_FAILED:
