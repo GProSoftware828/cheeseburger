@@ -3,6 +3,7 @@ import * as actionTypes from '../actions/actionTypes';
 const initialState = {
   orders: [],
   loading: false,
+  //not automatically resetting to false unless re-cache
   purchased: false
 };
 
